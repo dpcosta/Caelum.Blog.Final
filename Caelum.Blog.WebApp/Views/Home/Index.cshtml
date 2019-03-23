@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Caelum.Blog.Negocio.Post>
+
+@foreach(var post in Model)
+{
+    <article>
+        <h2>@post.Titulo</h2>
+        <p>@post.Resumo</p>
+        <p>Publicado em @post.DataPublicacao.Value.ToString("dd/MM/yyyy")</p>
+    </article>
+}

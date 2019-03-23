@@ -1,0 +1,36 @@
+﻿@model Caelum.Blog.WebApp.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - Blog</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body id="login">
+    <div id="login-form">
+        <h2 class="text-center">Login</h2>
+        <form asp-action="Autentica">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                @Html.ValidationMessage("usuarioNaoEncontrado")
+            </div>
+            <div class="form-group">
+                <label asp-for="Login" class="control-label"></label>
+                <input asp-for="Login" class="form-control" autofocus />
+                <span asp-validation-for="Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block">Autenticar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

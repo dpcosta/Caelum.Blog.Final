@@ -1,0 +1,11 @@
+﻿@model Caelum.Blog.Negocio.Post
+
+<form asp-action="Adiciona">
+    @Html.EditorFor(p => p)
+
+    <button>Gravar</button>
+</form>
+
+@section Scripts{ 
+    <partial name="Scripts" />
+}

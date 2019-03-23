@@ -1,0 +1,12 @@
+﻿@model Caelum.Blog.Negocio.Post
+
+<form asp-action="Atualiza">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    @Html.EditorFor(p => p)
+
+    <button>Gravar</button>
+</form>
+
+@section Scripts{
+    <partial name="Scripts" />
+}
